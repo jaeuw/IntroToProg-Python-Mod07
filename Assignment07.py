@@ -98,10 +98,8 @@ class Student(Person):
 
     @course_name.setter
     def course_name(self, value: str):
-        if value.isalpha() or value == "":
-            self.__course_name = value
-        else:
-            raise ValueError("The course name must contain letters and numbers only!")
+        self.__course_name = value
+
     def __str__(self):
         return f"{self.first_name},{self.last_name},{self.course_name}"
 
